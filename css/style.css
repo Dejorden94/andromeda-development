@@ -60,6 +60,11 @@ p {
     font-weight: 300;
 }
 
+.navigation>ul>a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .hero-container {
     display: flex;
     height: 100%;
