@@ -30,7 +30,7 @@ section {
     justify-content: flex-start;
     align-items: center;
     background-color: var(--background-color1);
-    height: 85vh;
+    height: 80vh;
     color: var(--background-white);
     font-size: 2rem;
     padding: 0 2rem;
@@ -48,8 +48,8 @@ footer {
     background: var(--background-color1);
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
-    padding: 0 2rem;
+    height: 20vh;
+    padding: 1rem 2rem;
 }
 
 .navigation>ul>a {
