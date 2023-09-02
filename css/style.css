@@ -1,3 +1,4 @@
+/* Resetten van de standaardmarges en -vullingen */
 *,
 *::after,
 *::before {
@@ -6,31 +7,44 @@
     box-sizing: border-box;
 }
 
+/* Algemene stijling voor de hele pagina */
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
 }
 
+/* Sectie opmaak */
 section {
     height: 50rem;
     background-color: white;
 }
 
+/* Hero-sectie opmaak */
 .hero {
+    display: flex;
+    justify-content: center;
     background-color: #1c1d25;
     height: 100vh;
     color: white;
     font-size: 2rem;
 }
 
+/* Footer opmaak */
 footer {
     height: 20vh;
     background-color: black;
 }
 
-nav {
+/* Navigatie opmaak */
+.navigation {
     display: flex;
+    background: #1c1d25;
     justify-content: space-between;
+}
+
+.navigation>ul>a {
+    text-decoration: none;
+    color: inherit;
 }
 
 ul {
@@ -45,6 +59,7 @@ li {
     text-decoration: none;
 }
 
+/* Koppen en alinea's */
 h1 {
     font-size: 4rem;
     margin: 0;
@@ -60,23 +75,22 @@ p {
     font-weight: 300;
 }
 
-.navigation>ul>a {
-    text-decoration: none;
-    color: inherit;
-}
-
+/* Hero-container opmaak */
 .hero-container {
     display: flex;
     height: 100%;
     justify-content: space-between;
     align-items: center;
+    background: none;
 }
 
+/* Tekst in de hero-sectie */
 .hero-text {
     margin-left: 48px;
     margin-bottom: 200px;
 }
 
+/* Stijl voor knoppen */
 .button {
     width: 20rem;
     height: 5rem;
@@ -98,6 +112,7 @@ p {
     color: #808080;
 }
 
+/* Sociale pictogrammen */
 .socials {
     padding-bottom: 20rem;
 }
@@ -106,11 +121,13 @@ p {
     margin: 1rem;
 }
 
+/* Logo opmaak */
 .logo {
     height: 8rem;
     margin: 3rem;
 }
 
+/* Subsecties */
 .sub-section {
     display: flex;
     justify-content: space-around;
@@ -125,6 +142,7 @@ p {
     height: 70rem;
 }
 
+/* Afbeelding van persoon */
 .headshot-container {
     display: flex;
     align-items: center;
@@ -135,12 +153,14 @@ p {
     border-radius: 15rem;
 }
 
+/* Projectkaart */
 .project-card {
     width: 20rem;
     height: 50rem;
     box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.4);
 }
 
+/* Container voor projecten */
 .project-container {
     display: flex;
     justify-content: space-around;
