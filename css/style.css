@@ -154,3 +154,19 @@ p {
     justify-content: space-around;
     gap: 2rem;
 }
+
+@media (max-width: 600px) {
+
+    .navigation {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 8rem;
+    }
+}
