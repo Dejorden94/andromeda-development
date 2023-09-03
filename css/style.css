@@ -19,11 +19,6 @@ body {
     font-size: 62.5%;
 }
 
-/* Sectie opmaak */
-section {
-    background-color: var(--background-white);
-}
-
 /* Hero-sectie opmaak */
 .hero {
     display: flex;
@@ -72,7 +67,6 @@ li {
 /* Koppen en alinea's */
 h1 {
     font-size: 4rem;
-    margin: 0;
 }
 
 h2 {
@@ -80,7 +74,6 @@ h2 {
 }
 
 p {
-    margin: 0;
     font-size: 30px;
     font-weight: 300;
 }
@@ -119,7 +112,7 @@ p {
 .sub-section {
     display: flex;
     justify-content: space-around;
-    padding: 8rem;
+    background-color: var(--background-white);
 }
 
 .sub-section-three {
@@ -166,7 +159,49 @@ p {
         flex-direction: column;
     }
 
+    ul>a>li {
+        text-align: center;
+    }
+
     .logo {
         height: 8rem;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-container>h1 {
+        font-size: 3rem;
+    }
+
+    .hero-container>h3 {
+        font-size: 2rem;
+    }
+
+    .hero-container>p {
+        font-size: 1.5rem;
+    }
+
+    .socials {
+        margin: 0;
+        display: flex;
+    }
+
+    .sub-section {
+        flex-direction: column;
+    }
+
+    .headshot {
+        width: 100%;
+    }
+
+    .project-container {
+        flex-direction: column;
     }
 }
