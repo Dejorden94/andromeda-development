@@ -116,12 +116,16 @@ p {
     background-color: var(--background-white);
 }
 
+.project-heading {
+    margin-bottom: 2rem;
+}
+
 .sub-section-three {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 8rem;
-    height: 70rem;
 }
 
 /* Afbeelding van persoon */
@@ -138,14 +142,16 @@ p {
 /* Projectkaart */
 .project-card {
     width: 20rem;
-    height: 50rem;
+    height: 60%;
     box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.4);
 }
 
 /* Container voor projecten */
 .project-container {
+    height: 80vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 
