@@ -110,6 +110,7 @@ p {
 
 /* Subsecties */
 .sub-section {
+    padding: 2rem;
     display: flex;
     justify-content: space-around;
     background-color: var(--background-white);
