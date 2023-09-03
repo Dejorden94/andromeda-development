@@ -71,6 +71,7 @@ h1 {
 
 h2 {
     font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 p {
@@ -116,10 +117,6 @@ p {
     background-color: var(--background-white);
 }
 
-.project-heading {
-    margin-bottom: 2rem;
-}
-
 .sub-section-three {
     padding: 2rem;
     display: flex;
@@ -148,7 +145,7 @@ p {
 
 /* Container voor projecten */
 .project-container {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
