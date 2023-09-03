@@ -156,6 +156,7 @@ p {
     }
 
     ul {
+        margin-top: 4rem;
         flex-direction: column;
     }
 
@@ -172,6 +173,7 @@ p {
     }
 
     .hero-container {
+        margin-top: 4rem;
         width: 100%;
         text-align: center;
     }
