@@ -267,9 +267,17 @@ p {
         flex-direction: column;
     }
 
+    .hero>* {
+        margin-top: 4rem;
+    }
+
     .hero-container {
         margin-top: 4rem;
         text-align: center;
+    }
+
+    .hero-container>* {
+        margin-top: 2rem;
     }
 
     .hero-container>h1 {
@@ -285,7 +293,7 @@ p {
     }
 
     .socials {
-        margin: 0;
+        margin: 4rem 0 0 0;
         display: flex;
     }
 
