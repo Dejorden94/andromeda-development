@@ -155,6 +155,35 @@ p {
     gap: 2rem;
 }
 
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-images {
+    width: 30%;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.tab {}
+
+.project-tab-button {
+    font-size: 2rem;
+    border: none;
+    color: var(--background-white);
+    width: 50%;
+    background: var(--background-color1);
+    height: 4rem;
+}
+
+.project-tab-button:hover {
+    background: var(--background-color2);
+}
+
 @media (max-width: 600px) {
 
     .navigation {

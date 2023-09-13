@@ -18,17 +18,18 @@
 <body>
     <main id="app">
         <section class="tabs">
-            <button v-for="(tab, index) in tabs" :key="index" @click="activeTab = index">{{ tab }}</button>
+            <button v-for="(tab, index) in tabs" :key="index" @click="activeTab = index" class="project-tab-button">{{
+                tab }}</button>
         </section>
 
         <article class="image-gallery">
-            <section v-for="(image, index) in images[activeTab]" :key="index" class="project-image">
-                <img :src="image" alt="Image {{ index + 1 }}">
-            </section>
-            <section>
-                <p v-for="(text, index) in texts[activeTab]" :key="index" class="project-text">{{ text }}</p>
+            <section v-for="(image, index) in images[activeTab]" :key="index" class="project-images">
+                <img class="project-image" :src="image" alt="Image {{ index + 1 }}">
             </section>
         </article>
+        <section>
+            <p v-for="(text, index) in texts[activeTab]" :key="index" class="project-text">{{ text }}</p>
+        </section>
     </main>
 
     <script>
