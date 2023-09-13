@@ -156,6 +156,28 @@ p {
 }
 
 /*Styling voor project page*/
+.project-body {
+    background-image: url('../src/images/stars-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-body>nav {
+    width: 100vw;
+}
+
+.vue-container {
+    width: 90vw;
+    background: var(--background-white);
+}
 
 .image-gallery {
     display: flex;

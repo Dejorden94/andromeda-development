@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>Projects</title>
 
-<body>
+<body class="project-body">
     <nav class="navigation">
         <img class="logo" src="src/images/logo-only.png" alt="Andromeda Development Logo">
         <ul>
@@ -30,7 +30,7 @@
             </a>
         </ul>
     </nav>
-    <main id="app">
+    <main id="app" class="vue-container">
         <section class="tabs">
             <button v-for="(tab, index) in tabs" :key="index" @click="activeTab = index" class="project-tab-button">{{
                 tab }}</button>
