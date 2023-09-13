@@ -155,6 +155,8 @@ p {
     gap: 2rem;
 }
 
+/*Styling voor project page*/
+
 .image-gallery {
     display: flex;
     justify-content: center;
