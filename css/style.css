@@ -275,6 +275,7 @@ p {
     }
 
     .hero {
+        height: 60vh;
         flex-direction: column;
     }
 
