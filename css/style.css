@@ -13,10 +13,13 @@
     --background-white: #eee;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 /* Algemene stijling voor de hele pagina */
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 62.5%;
 }
 
 /* Hero-sectie opmaak */
@@ -205,12 +208,12 @@ p {
 .tab {}
 
 .project-tab-button {
-    font-size: 2rem;
+    font-size: 3rem;
     border: none;
     color: var(--background-white);
     width: 50%;
     background: var(--background-color1);
-    height: 4rem;
+    height: 8rem;
 }
 
 .project-tab-button:hover {
