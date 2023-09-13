@@ -37,7 +37,7 @@ body {
 /* Footer opmaak */
 footer {
     height: 20vh;
-    background-color: black;
+    background-color: var(--background-color1);
 }
 
 /* Navigatie opmaak */
@@ -190,7 +190,7 @@ p {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 
 .project-images {
@@ -202,7 +202,7 @@ p {
 }
 
 .project-text {
-    padding: 2rem;
+    padding: 6rem;
 }
 
 .tab {}
