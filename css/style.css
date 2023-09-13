@@ -198,6 +198,16 @@ p {
     gap: 2rem;
 }
 
+.project-body::before {
+    content: 'Hallo';
+    background: var(--background-color1);
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    opacity: 0.6;
+    z-index: -1;
+}
+
 .project-body>nav {
     width: 100vw;
 }
