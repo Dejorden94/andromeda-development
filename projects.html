@@ -41,9 +41,12 @@
                 <img class="project-image" :src="image" alt="Image {{ index + 1 }}">
             </section>
         </article>
-        <section>
-            <p v-for="(text, index) in texts[activeTab]" :key="index" class="project-text">{{ text }}</p>
+
+        <section class="project-text">
+            <h2>Project informatie</h2>
+            <p v-for="(text, index) in texts[activeTab]" :key="index">{{ text }}</p>
         </section>
+
     </main>
 
     <script>

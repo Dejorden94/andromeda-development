@@ -156,11 +156,13 @@ p {
 }
 
 /*Styling voor project page*/
+
 .project-body {
     background-image: url('../src/images/stars-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--background-color1);
 
     background-attachment: fixed;
     display: flex;
@@ -185,6 +187,7 @@ p {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
+    padding: 0 2rem;
 }
 
 .project-images {
@@ -193,6 +196,10 @@ p {
 
 .project-image {
     width: 100%;
+}
+
+.project-text {
+    padding: 2rem;
 }
 
 .tab {}
