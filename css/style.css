@@ -85,16 +85,20 @@ li {
 
 /* Koppen en alinea's */
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 2rem;
 }
 
+h3 {
+    font-size: 3rem;
+}
+
 p {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 300;
 }
 
@@ -164,7 +168,7 @@ p {
 
 /* Projectkaart */
 .project-card {
-    width: 20rem;
+    width: 30rem;
     height: 60%;
     box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.4);
 }
@@ -175,7 +179,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 /*Styling voor project page*/
