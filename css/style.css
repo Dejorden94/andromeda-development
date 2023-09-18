@@ -71,7 +71,7 @@ body {
 /* Footer opmaak */
 footer {
     height: 20vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--background-color1);
     display: flex;
     justify-content: center;
