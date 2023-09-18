@@ -230,6 +230,14 @@ p {
 
 .contact-section {
     background-color: var(--background-color-light);
+    display: flex;
+    justify-content: center;
+}
+
+.contact-section>section {
+    padding: 4rem 0;
+    width: 100%;
+    max-width: 120rem;
 }
 
 /*Styling voor project page*/
