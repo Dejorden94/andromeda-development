@@ -77,7 +77,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--background-white);
+    color: var(--background-color-light);
     text-align: center;
 }
 
