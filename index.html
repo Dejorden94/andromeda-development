@@ -78,7 +78,7 @@
                         </svg></a></div>
             </aside>
         </div>
-        <a class="contact-link-button" href="#footer">Neem contact op</a>
+        <a class="contact-link-button" href="#contact-form">Neem contact op</a>
     </article>
 
     <article class="sub-section">
@@ -118,32 +118,32 @@
             <section class="project-card"></section>
         </article>
     </section>
-    <footer id="footer">
-        <article class="contact-section">
-            <h2>Contacteer mij</h2>
-            <p>Heeft u vragen of wilt u een project bespreken? Vul dan het onderstaande formulier in:</p>
-            <form action="php/form.php" method="post">
-                <section class="form-group">
-                    <label for="name">Naam:</label>
-                    <input type="text" id="name" name="name" required>
-                </section>
-                <section class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </section>
-                <section class="form-group">
-                    <label for="message">Bericht:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </section>
-                <section class="form-group">
-                    <button type="submit">Verzenden</button>
-                </section>
-            </form>
-        </article>
 
-        <footer>
-            <p>Andromeda development - 2022</p>
-        </footer>
+    <article id="contact-form" class="contact-section">
+        <h2>Contacteer mij</h2>
+        <p>Heeft u vragen of wilt u een project bespreken? Vul dan het onderstaande formulier in:</p>
+        <form action="php/form.php" method="post">
+            <section class="form-group">
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="name" required>
+            </section>
+            <section class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </section>
+            <section class="form-group">
+                <label for="message">Bericht:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </section>
+            <section class="form-group">
+                <button type="submit">Verzenden</button>
+            </section>
+        </form>
+    </article>
+
+    <footer id="footer">
+        <p>Andromeda development - 2022</p>
+    </footer>
 </body>
 
 </html>
