@@ -10,7 +10,8 @@
 :root {
     --background-color1: #1c1d25;
     --background-color2: #ef744b;
-    --background-white: #eee;
+
+    --background-color-light: #eee;
     --font: 'Montserrat', sans-serif;
     --button-border: 5rem;
 }
@@ -34,7 +35,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 80vh;
-    color: var(--background-white);
+    color: var(--background-color-light);
     font-size: 2rem;
 
     background-image: url('../src/images/stars-background.jpg');
@@ -101,7 +102,7 @@ footer {
 
 .navigation>.navigation-position>ul>a {
     text-decoration: none;
-    color: var(--background-white);
+    color: var(--background-color-light);
 }
 
 .navigation>.navigation-position>ul {
@@ -170,7 +171,7 @@ p {
     line-height: 10rem;
     z-index: 10;
     background: var(--background-color2);
-    color: var(--background-white);
+    color: var(--background-color-light);
     font-size: 130%;
     font-weight: bold;
     border-radius: var(--button-border);
@@ -181,7 +182,7 @@ p {
     padding: 4rem 0;
     display: flex;
     justify-content: space-around;
-    background-color: var(--background-white);
+    background-color: var(--background-color-light);
 }
 
 .about-section {
@@ -225,6 +226,10 @@ p {
     justify-content: center;
     align-items: center;
     gap: 5rem;
+}
+
+.contact-section {
+    background-color: var(--background-color-light);
 }
 
 /*Styling voor project page*/
