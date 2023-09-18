@@ -54,7 +54,7 @@ body {
 
 .hero-position {
     width: 100%;
-    max-width: 100rem;
+    max-width: 120rem;
     display: flex;
     justify-content: flex-start;
 }
@@ -155,7 +155,7 @@ p {
 }
 
 .about-section {
-    max-width: 100rem;
+    max-width: 120rem;
     display: flex;
 }
 
