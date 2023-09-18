@@ -11,6 +11,7 @@
     --background-color1: #1c1d25;
     --background-color2: #ef744b;
     --background-white: #eee;
+    --font: 'Montserrat', sans-serif;
 }
 
 html {
@@ -19,7 +20,7 @@ html {
 
 /* Algemene stijling voor de hele pagina */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font)
 }
 
 /* Hero-sectie opmaak */
@@ -55,6 +56,11 @@ footer {
     height: 20vh;
     width: 100vw;
     background-color: var(--background-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-white);
+    text-align: center;
 }
 
 /* Navigatie opmaak */
