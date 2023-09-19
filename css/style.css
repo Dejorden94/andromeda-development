@@ -259,10 +259,10 @@ p {
 }
 
 .project-card:nth-of-type(3):after {
-    background-image: url("/src/images/projects/educatie/educatie.jpg");
+    background-image: url("/src/images/projects/os-portfolio/os-portfolio.png");
     background-size: cover;
-    background-position: right;
-    content: 'Educatie';
+    background-position: center;
+    content: 'Os Portfolio';
 }
 
 .project-card:nth-of-type(4):after {
