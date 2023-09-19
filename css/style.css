@@ -363,6 +363,12 @@ p {
     background: var(--background-color2);
 }
 
+/* Over mij pagina styling */
+
+.over-mij {
+    min-height: 80vh;
+}
+
 @media (max-width: 600px) {
 
     .navigation {
