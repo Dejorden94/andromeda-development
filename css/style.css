@@ -216,8 +216,62 @@ p {
 .project-card {
     width: 30rem;
     height: 60%;
-    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.4);
+    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 1rem;
 }
+
+.project-card::before {
+    height: 100%;
+    background: var(--background-color1);
+    opacity: 0.7;
+}
+
+.project-card::after {
+    font-size: 150%;
+    font-weight: 700;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-color2);
+    border-radius: 1rem;
+}
+
+.project-card:hover {
+    background: var(--background-color1);
+    opacity: 0.7;
+
+}
+
+.project-card:first-of-type:after {
+    background-image: url("/src/images/projects/xp-arena/project-xparena2.png");
+    background-size: cover;
+    background-position: center;
+    content: 'XP Arena';
+}
+
+.project-card:nth-of-type(2):after {
+    background-image: url("/src/images/projects/be-a-critic/be-a-critic-placeholder.jpg");
+    background-size: cover;
+    background-position: center;
+    content: 'Be a critic';
+}
+
+.project-card:nth-of-type(3):after {
+    background-image: url("/src/images/projects/educatie/educatie.jpg");
+    background-size: cover;
+    background-position: right;
+    content: 'Educatie';
+}
+
+.project-card:nth-of-type(4):after {
+    background-image: url("/src/images/projects/vrije-tijd/vrije-tijd.jpg");
+    background-size: cover;
+    background-position: center;
+    content: 'Vrije tijd';
+}
+
 
 /* Container voor projecten */
 .project-container {
