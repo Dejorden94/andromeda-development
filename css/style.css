@@ -354,7 +354,7 @@ p {
     font-size: 3rem;
     border: none;
     color: var(--background-color-light);
-    width: 50%;
+    width: 25%;
     background: var(--background-color1);
     height: 8rem;
 }
