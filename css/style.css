@@ -341,7 +341,7 @@ p {
     }
 
     .hero {
-        height: 60vh;
+        min-height: 60vh;
         flex-direction: column;
     }
 
@@ -350,7 +350,6 @@ p {
     }
 
     .hero-container {
-        margin-top: 4rem;
         text-align: center;
     }
 
@@ -361,10 +360,6 @@ p {
 
     .hero-position {
         flex-direction: column;
-    }
-
-    .contact-link-button {
-        margin: 0 0 4rem 0;
     }
 
     .about-section {
@@ -379,5 +374,9 @@ p {
 
     .project-container {
         flex-direction: column;
+    }
+
+    .contact-section>section {
+        padding: 4rem;
     }
 }
