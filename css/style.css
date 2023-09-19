@@ -326,7 +326,7 @@ p {
 
 .vue-container {
     width: 90vw;
-    background: var(--background-white);
+    background: var(--background-color-light);
 }
 
 .image-gallery {
@@ -350,12 +350,10 @@ p {
     padding: 6rem;
 }
 
-.tab {}
-
 .project-tab-button {
     font-size: 3rem;
     border: none;
-    color: var(--background-white);
+    color: var(--background-color-light);
     width: 50%;
     background: var(--background-color1);
     height: 8rem;
