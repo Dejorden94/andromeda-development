@@ -401,6 +401,7 @@ p {
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .over-headshot>img {
@@ -496,8 +497,6 @@ p {
 
     .over-mij-section {
         flex-direction: column;
-        margin-bottom: 2rem;
-
     }
 
     .model-desktop {
