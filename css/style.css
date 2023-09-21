@@ -370,10 +370,26 @@ p {
 
 /* Over mij pagina styling */
 
+.main-over-mij {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-over-mij>* {
+    max-width: 120rem;
+}
+
 .over-mij {
     min-height: 80vh;
     display: flex;
     flex-direction: column;
+}
+
+.over-mij-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .over-headshot {
