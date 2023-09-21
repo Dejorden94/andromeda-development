@@ -81,6 +81,10 @@ footer {
     text-align: center;
 }
 
+article {
+    padding: 4rem 0;
+}
+
 /* Navigatie opmaak */
 .navigation {
     display: flex;
@@ -161,9 +165,11 @@ p {
 /* Logo opmaak */
 .logo {
     height: 100%;
+    margin: 2rem 0;
 }
 
-.contact-link-button {
+.contact-link-button,
+.check-werk {
     text-decoration: none;
     text-align: center;
     min-width: 30rem;
@@ -175,6 +181,11 @@ p {
     font-size: 130%;
     font-weight: bold;
     border-radius: var(--button-border);
+}
+
+.check-werk {
+    margin: 0 auto 2rem auto;
+    max-width: 20rem;
 }
 
 /* Subsecties */
@@ -365,8 +376,45 @@ p {
 
 /* Over mij pagina styling */
 
+.main-over-mij {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-over-mij>* {
+    max-width: 120rem;
+}
+
 .over-mij {
     min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.over-mij>h1 {
+    margin-bottom: 2rem;
+}
+
+.over-mij-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.over-headshot>img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 15rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+.model-desktop {
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 600px) {
@@ -436,5 +484,24 @@ p {
 
     .contact-section>section {
         padding: 4rem;
+    }
+
+    .main-over-mij {
+        padding: 4rem;
+    }
+
+    .over-mij>h1 {
+        text-align: center;
+    }
+
+    .over-mij-section {
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+    }
+
+    .model-desktop {
+        height: 20rem;
+        width: 20rem;
     }
 }
