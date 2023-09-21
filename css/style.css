@@ -402,10 +402,14 @@ p {
     border-radius: 15rem;
     object-fit: cover;
     object-position: top;
+    padding: 2rem;
 }
 
 
-
+.model-desktop {
+    width: 100%;
+    height: 100%;
+}
 
 @media (max-width: 600px) {
 
@@ -474,5 +478,20 @@ p {
 
     .contact-section>section {
         padding: 4rem;
+    }
+
+    .main-over-mij {
+        padding: 4rem;
+    }
+
+    .over-mij-section {
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+    }
+
+    .model-desktop {
+        height: 20rem;
+        width: 20rem;
     }
 }
