@@ -422,7 +422,13 @@ p {
     height: 40rem;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+    .over-mij {
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
 
     .navigation {
         height: 100%;
