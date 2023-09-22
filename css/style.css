@@ -113,12 +113,22 @@ article {
     margin-left: auto;
 }
 
+.active {
+    background: var(--background-color2);
+    border-radius: var(--button-border);
+}
+
 ul {
+    text-align: center;
     display: flex;
     list-style-type: none;
     justify-content: space-around;
     font-size: 2rem;
     gap: 2rem;
+}
+
+ul>a {
+    padding: 2rem;
 }
 
 li {
