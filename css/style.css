@@ -454,6 +454,11 @@ p {
         margin: 4rem 0;
     }
 
+    .active {
+        width: 100vw;
+        border-radius: 0;
+    }
+
     ul {
         margin-top: 4rem;
         flex-direction: column;
