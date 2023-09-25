@@ -37,10 +37,12 @@
     </nav>
 
     <main id="app" class="vue-container">
-        <section class="tabs">
-            <button v-for="(tab, index) in tabs" :key="index" @click="activeTab = index" class="project-tab-button">{{
-                tab }}</button>
+        <section class="dropdown">
+            <select v-model="activeTab" @change="updateActiveTab">
+                <option v-for="(tab, index) in tabs" :value="index">{{ tab }}</option>
+            </select>
         </section>
+
 
         <article class="image-gallery">
             <section v-for="(image, index) in images[activeTab]" :key="index" class="project-images">
@@ -93,6 +95,11 @@
                     ['https://dejorden94.github.io/'],
                     ['http://206.189.99.85/'],
                 ]
+            },
+            methods: {
+                updateActiveTab() {
+                    this.activeTab = parseInt(this.activeTab);
+                }
             }
         });
     </script>
