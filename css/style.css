@@ -171,6 +171,7 @@ p {
 .logo {
     height: 100%;
     margin: 2rem 0;
+    padding: 2rem;
 }
 
 .contact-link-button,
@@ -440,9 +441,19 @@ p {
 
 @media screen and (max-width: 600px) {
 
+    .logo {
+        padding: 0;
+    }
+
     .navigation {
         height: 100%;
         justify-content: center;
+    }
+
+    .active {
+        border-bottom: 2px solid var(--background-color2);
+        border-top: 2px solid var(--background-color2);
+        ;
     }
 
     .navigation-position {
