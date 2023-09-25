@@ -35,29 +35,25 @@
             </ul>
         </div>
     </nav>
+    <main id="app" class="project-main">
+        <h1>Projecten</h1>
+        <article class="vue-container">
+            <!-- Project kaartjes overzicht -->
+            <section v-if="selectedProject === null" v-for="(tab, index) in tabs" :key="index" class="project-card-vue"
+                @click="selectProject(index)">
+                <img :src="images[index][0]" alt="Project afbeelding" class="project-image">
+                <h3>{{ tab }}</h3>
+            </section>
 
-    <main id="app" class="vue-container">
-        <section class="dropdown">
-            <select v-model="activeTab" @change="updateActiveTab">
-                <option v-for="(tab, index) in tabs" :value="index">{{ tab }}</option>
-            </select>
-        </section>
-
-
-        <article class="image-gallery">
-            <section v-for="(image, index) in images[activeTab]" :key="index" class="project-images">
-                <img class="project-image" :src="image" alt="Screeenshot van project">
+            <!-- Gedetailleerde project informatie -->
+            <section v-if="selectedProject !== null" class="project-detail">
+                <button @click="deselectProject">Terug</button>
+                <h2>{{ tabs[selectedProject] }}</h2>
+                <img :src="images[selectedProject][0]" alt="Project afbeelding" class="project-image">
+                <p v-for="(text, index) in texts[selectedProject]" :key="index">{{ text }}</p>
+                <a :href="src[selectedProject]" target="_blank">{{ buttons[selectedProject] }}</a>
             </section>
         </article>
-
-        <section class="project-text">
-            <h2>Project informatie</h2>
-            <p v-for="(text, index) in texts[activeTab]" :key="index">{{ text }}</p>
-            <a v-for="(button, index) in buttons[activeTab]" :key="index" :href="src[activeTab]" target="_blank">
-                {{ button }}
-            </a>
-
-        </section>
     </main>
 
     <footer>
@@ -68,7 +64,8 @@
         new Vue({
             el: '#app',
             data: {
-                tabs: ['XP Arena', 'Be a critic', 'Os portfolio', 'Vrije tijd'],
+                selectedProject: null,
+                tabs: ['XP Arena', 'Be a critic', 'Os site', 'Vrije tijd'],
                 activeTab: 0,
                 images: [
                     ['src/images/projects/xp-arena/project-xparena.png', 'src/images/projects/xp-arena/Logo-XP-arena.png', 'src/images/projects/xp-arena/project-xparena2.png'],
@@ -97,8 +94,11 @@
                 ]
             },
             methods: {
-                updateActiveTab() {
-                    this.activeTab = parseInt(this.activeTab);
+                selectProject(index) {
+                    this.selectedProject = index;
+                },
+                deselectProject() {
+                    this.selectedProject = null;
                 }
             }
         });

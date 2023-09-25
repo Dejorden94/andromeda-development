@@ -346,19 +346,65 @@ p {
     width: 100vw;
 }
 
-.vue-container {
-    width: 90vw;
+.project-main {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
     background: var(--background-color-light);
 }
 
-.dropdown select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    appearance: none;
-    cursor: pointer;
+.vue-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
 }
+
+.project-card-vue {
+    flex: 0 0 calc(40% - 1rem);
+    /* Neemt 50% van de breedte minus een beetje marge voor ruimte ertussen */
+    margin: 2rem 2rem;
+
+    cursor: pointer;
+    background: var(--background-color1);
+    color: var(--background-color-light);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project-card-vue:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.project-detail {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-detail button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.project-detail button:hover {
+    background-color: #bbb;
+}
+
+
 
 .image-gallery {
     display: flex;
