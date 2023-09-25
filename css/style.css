@@ -9,7 +9,7 @@
 
 :root {
     --background-color1: #1c1d25;
-    --background-color2: #ef744b;
+    --background-color2: #6F42C1;
 
     --background-color-light: #eee;
     --font: 'Montserrat', sans-serif;
@@ -81,10 +81,6 @@ footer {
     text-align: center;
 }
 
-article {
-    padding: 4rem 0;
-}
-
 /* Navigatie opmaak */
 .navigation {
     display: flex;
@@ -114,8 +110,7 @@ article {
 }
 
 .active {
-    background: var(--background-color2);
-    border-radius: var(--button-border);
+    border-bottom: 2px solid var(--background-color2);
 }
 
 ul {
@@ -234,6 +229,11 @@ p {
 }
 
 /* Projectkaart */
+
+.project-heading {
+    margin: 0;
+}
+
 .project-card {
     width: 30rem;
     height: 60%;
