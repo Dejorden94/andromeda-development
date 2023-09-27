@@ -273,21 +273,22 @@ p {
     content: 'XP Arena';
 }
 
+/* 
 .project-card:nth-of-type(2):after {
     background-image: url("/src/images/projects/be-a-critic/be-a-critic-placeholder.jpg");
     background-size: cover;
     background-position: center;
     content: 'Be a critic';
-}
+} */
 
-.project-card:nth-of-type(3):after {
+.project-card:nth-of-type(2):after {
     background-image: url("/src/images/projects/os-portfolio/os-portfolio.png");
     background-size: cover;
     background-position: center;
     content: 'Os Portfolio';
 }
 
-.project-card:nth-of-type(4):after {
+.project-card:nth-of-type(3):after {
     background-image: url("/src/images/projects/vrije-tijd/vrije-tijd.jpg");
     background-size: cover;
     background-position: center;
