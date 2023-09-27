@@ -608,4 +608,8 @@ p {
         height: 20rem;
         width: 20rem;
     }
+
+    .project-card-vue {
+        flex: auto;
+    }
 }
