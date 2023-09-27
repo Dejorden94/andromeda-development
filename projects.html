@@ -49,9 +49,10 @@
             <section v-if="selectedProject !== null" class="project-detail">
                 <button @click="deselectProject">Terug</button>
                 <h2>{{ tabs[selectedProject] }}</h2>
-                <img :src="images[selectedProject][0]" alt="Project afbeelding" class="project-image">
-                <p v-for="(text, index) in texts[selectedProject]" :key="index">{{ text }}</p>
-                <a :href="src[selectedProject]" target="_blank">{{ buttons[selectedProject] }}</a>
+                <img :src="images[selectedProject][0]" alt="Project afbeelding" class="project-image-selected">
+                <p class="selected-text" v-for="(text, index) in texts[selectedProject]" :key="index">{{ text }}</p>
+                <a class="project-selected-link" :href="src[selectedProject]" target="_blank">{{
+                    buttons[selectedProject] }}</a>
             </section>
         </article>
     </main>
@@ -79,9 +80,9 @@
                 ],
                 buttons:
                     [
-                        ['Link naar XP Arena'],
-                        ['Link naar Os portfolio'],
-                        ['Link naar GitHub'],
+                        'Link naar XP Arena',
+                        'Link naar Os portfolio',
+                        'Link naar GitHub',
                     ],
                 src: [
                     ['http://206.189.99.85/'],

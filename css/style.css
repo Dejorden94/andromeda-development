@@ -382,9 +382,8 @@ p {
 }
 
 .project-image {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    height: 80%;
 }
 
 .project-detail {
@@ -428,17 +427,30 @@ p {
     padding: 6rem;
 }
 
-.project-tab-button {
-    font-size: 3rem;
-    border: none;
-    color: var(--background-color-light);
-    width: 25%;
-    background: var(--background-color1);
-    height: 8rem;
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
-.project-tab-button:hover {
-    background: var(--background-color2);
+.project-image-selected {
+    max-height: 30rem;
+}
+
+.selected-text {
+    max-width: 60rem;
+}
+
+.project-selected-link {
+    text-decoration: none;
+    color: var(--background-color-light);
+    background-color: var(--background-color2);
+    width: 15vw;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 1rem;
 }
 
 /* Over mij pagina styling */
