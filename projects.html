@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>Projects</title>
 
@@ -36,8 +39,8 @@
         </div>
     </nav>
     <main id="app" class="project-main">
-        <h1>Projecten</h1>
-        <article class="vue-container">
+        <h1 data-aos="zoom-in">Projecten</h1>
+        <article class="vue-container" data-aos="fade-up">
             <!-- Project kaartjes overzicht -->
             <section v-if="selectedProject === null" v-for="(tab, index) in tabs" :key="index" class="project-card-vue"
                 @click="selectProject(index)">
@@ -48,10 +51,12 @@
             <!-- Gedetailleerde project informatie -->
             <section v-if="selectedProject !== null" class="project-detail">
                 <button @click="deselectProject">Terug</button>
-                <h2>{{ tabs[selectedProject] }}</h2>
-                <img :src="images[selectedProject][0]" alt="Project afbeelding" class="project-image-selected">
-                <p class="selected-text" v-for="(text, index) in texts[selectedProject]" :key="index">{{ text }}</p>
-                <a class="project-selected-link" :href="src[selectedProject]" target="_blank">{{
+                <h2 data-aos="fade-right">{{ tabs[selectedProject] }}</h2>
+                <img :src="images[selectedProject][0]" alt="Project afbeelding" class="project-image-selected"
+                    data-aos="fade-left">
+                <p class="selected-text" v-for="(text, index) in texts[selectedProject]" :key="index"
+                    data-aos="fade-right">{{ text }}</p>
+                <a class="project-selected-link" :href="src[selectedProject]" target="_blank" data-aos="fade-left">{{
                     buttons[selectedProject] }}</a>
             </section>
         </article>
