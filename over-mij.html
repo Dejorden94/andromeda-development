@@ -15,7 +15,9 @@
     <!--It helps to handle how the 3D Object would be displayed -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="js/main.js" defer></script>
     <title>Over mij</title>
 </head>
 
@@ -43,8 +45,9 @@
         <article class="over-mij">
             <h1>Hallo! Ik ben Dejorden</h1>
             <section class="over-mij-section">
-                <p>
-                    <img class="over-headshot" src="src/images/dejorden.jpeg" alt="Dejorden kijkt naar rechts.">
+                <p data-aos="fade-left">
+                    <img class="over-headshot" src="src/images/dejorden.jpeg" alt="Dejorden kijkt naar rechts."
+                        data-aos="fade-right">
                     Welkom op mijn website! Mijn naam is Dejorden, een gedreven freelance web developer met een rijke
                     achtergrond in zowel game design als multimedia communicatie.
                     Mijn passie voor het digitale domein begon aan het Mediacollege Amsterdam waar ik in 2016
@@ -76,7 +79,8 @@
 
                 <!-- "Low Poly Planet Earth" (https://skfb.ly/oBuSv) by Jacobs Development is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). -->
                 <model-viewer class="model-desktop" minimumRenderScale="1" src="src/3dobjects/scene.gltf"
-                    alt="Computer rotating" auto-rotate ios-src="src/3dobjects/scene.gltf"></model-viewer>
+                    alt="Computer rotating" auto-rotate ios-src="src/3dobjects/scene.gltf"
+                    data-aos="fade-up"></model-viewer>
             </section>
         </article>
     </main>
