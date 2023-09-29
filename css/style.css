@@ -501,6 +501,18 @@ p {
     .over-mij {
         padding: 4rem;
     }
+
+    .hero {
+        padding: 0 4rem;
+    }
+
+    .about-section {
+        padding: 0 4rem;
+    }
+
+    .contact-section {
+        padding: 0 4rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -571,7 +583,6 @@ p {
 
     .about-section {
         flex-direction: column;
-        padding: 0 4rem;
     }
 
     .headshot {
