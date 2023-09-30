@@ -502,7 +502,7 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
-    .navigation-position>ul {
+    .menu-list {
         display: none;
         background: red;
     }
