@@ -6,5 +6,9 @@ const mobileMenu = document.getElementById("mobile-menu-button-js");
 const menuList = document.getElementById("mobile-menu-list-js");
 
 mobileMenu.onclick = () => {
-    console.log("hallo");
+    if (menuList.classList.contains('open')) {
+        menuList.classList.remove('open');
+    } else {
+        menuList.classList.add('open');
+    }
 }

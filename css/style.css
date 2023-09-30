@@ -125,6 +125,7 @@ ul {
     justify-content: space-around;
     font-size: 2rem;
     gap: 2rem;
+    transition: 1s;
 }
 
 ul>a {
@@ -503,8 +504,14 @@ p {
 
 @media screen and (max-width: 1200px) {
     .menu-list {
-        display: none;
-        background: red;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    .menu-list.open {
+        max-height: 40rem;
+        /* Je kunt dit aanpassen aan de daadwerkelijke hoogte van je menu */
     }
 
     .mobile-menu {
@@ -551,7 +558,7 @@ p {
     }
 
     .navigation>.navigation-position>ul {
-        margin: 4rem 0;
+        margin: 0;
     }
 
     .active {
