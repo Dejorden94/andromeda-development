@@ -321,6 +321,28 @@ p {
     content: 'Vrije tijd';
 }
 
+.tech-stack {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* Afstand tussen de logo's */
+}
+
+.tech-logo {
+    height: 10rem;
+    /* Pas de hoogte aan naar wens */
+    width: auto;
+    margin: 10px;
+}
+
+
 
 /* Container voor projecten */
 .project-container {
@@ -441,7 +463,10 @@ p {
     max-width: 60rem;
 }
 
-.project-selected-link {
+.project-selected-link,
+.cv-button {
+    text-align: center;
+    margin: 0 auto;
     text-decoration: none;
     color: var(--background-color-light);
     background-color: var(--background-color2);
@@ -450,6 +475,7 @@ p {
     line-height: 5rem;
     border-radius: var(--button-border);
 }
+
 
 /* Over mij pagina styling */
 
