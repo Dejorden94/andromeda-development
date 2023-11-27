@@ -221,6 +221,34 @@ p {
     text-align: center;
 }
 
+.github-sum {
+    margin-bottom: 2rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.github-sum>section {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-sum>a {
+    text-decoration: none;
+}
+
+.github-info {
+    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
 /* Afbeelding van persoon */
 .headshot-container {
     display: flex;
@@ -278,14 +306,6 @@ p {
     background-position: center;
     content: 'XP Arena';
 }
-
-/* 
-.project-card:nth-of-type(2):after {
-    background-image: url("/src/images/projects/be-a-critic/be-a-critic-placeholder.jpg");
-    background-size: cover;
-    background-position: center;
-    content: 'Be a critic';
-} */
 
 .project-card:nth-of-type(2):after {
     background-image: url("/src/images/projects/os-portfolio/os-portfolio.png");
@@ -498,6 +518,10 @@ p {
 
     .contact-section {
         padding: 0 4rem;
+    }
+
+    .github-sum>section {
+        flex-direction: column;
     }
 }
 
