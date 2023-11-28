@@ -729,4 +729,8 @@ p {
     .selected-text {
         width: 40%;
     }
+
+    .project-header-image {
+        text-align: center;
+    }
 }
