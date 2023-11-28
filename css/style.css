@@ -373,7 +373,7 @@ p {
 
 
 .project-main {
-    margin: 4rem auto;
+    margin: 0 auto 4rem auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -384,22 +384,23 @@ p {
 
 .project-header-image {
     width: 100%;
-    height: 300px;
+    height: 30rem;
     /* Stel de gewenste hoogte in */
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease-in-out;
 }
 
 
 .vue-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
 }
 
 .project-card-vue {
-    max-width: 33%;
+    width: 30rem;
     cursor: pointer;
     color: var(--background-color1);
     padding: 2rem;
@@ -551,15 +552,6 @@ p {
 
     .github-sum>section {
         flex-direction: column;
-    }
-
-    .vue-container {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .project-card-vue {
-        max-width: 100%;
     }
 }
 

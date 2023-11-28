@@ -43,23 +43,26 @@
             </ul>
         </div>
     </nav>
-    <article v-if="selectedProject !== null" class="project-header-image"
-        :style="{'background-image': 'url(' + images[selectedProject][0] + ')'}">
-    </article>
+
     <main id="app" class="project-main">
+        <article class="project-header-image"
+            :style="{'background-image': 'url(' + (selectedProject !== null ? imagesCss[selectedProject][0] : placeholderImage) + ')'}">
+        </article>
         <h1 data-aos="zoom-in">Projecten</h1>
         <article class="vue-container" data-aos="fade-up">
             <!-- Project kaartjes overzicht -->
+
             <section v-if="selectedProject === null" v-for="(tab, index) in tabs" :key="index" class="project-card-vue"
                 @click="selectProject(index)">
                 <img :src="images[index][0]" alt="Project afbeelding" class="project-image">
                 <h3>{{ tab }}</h3>
             </section>
 
+
             <!-- Gedetailleerde project informatie -->
             <section v-if="selectedProject !== null" class="project-detail">
                 <button @click="deselectProject">Terug</button>
-                <h2 data-aos="fade-right">{{ tabs[selectedProject] }}</h2>
+                <h2 id="title" data-aos="fade-right">{{ tabs[selectedProject] }}</h2>
                 <img :src="images[selectedProject][0]" alt="Project afbeelding" class="project-image-selected"
                     data-aos="fade-left">
                 <p class="selected-text" v-for="(text, index) in texts[selectedProject]" :key="index"
@@ -79,12 +82,18 @@
             el: '#app',
             data: {
                 selectedProject: null,
+                placeholderImage: 'src/images/projects/be-a-critic/be-a-critic-placeholder.jpg',
                 tabs: ['XP Arena', 'Os site', 'Vrije tijd'],
                 activeTab: 0,
                 images: [
                     ['src/images/projects/xp-arena/project-xparena.png'],
                     ['src/images/projects/os-portfolio/os-portfolio.png'],
                     ['src/images/projects/vrije-tijd/vrije-tijd.jpg'],
+                ],
+                imagesCss: [
+                    ['../src/images/projects/xp-arena/project-xparena.png'],
+                    ['../src/images/projects/os-portfolio/os-portfolio.png'],
+                    ['../src/images/projects/vrije-tijd/vrije-tijd.jpg'],
                 ],
                 texts: [
                     ['XP arena is een tool om elke taak te gamificeren, het originele platform was gemaakt met puur PHP. Tijdens deze opdracht heb ik het platform omgezet naar een Laravel en Vue applicatie.'],
@@ -106,6 +115,16 @@
             methods: {
                 selectProject(index) {
                     this.selectedProject = index;
+
+                    // Gebruik Vue's nextTick om te wachten tot de DOM is bijgewerkt
+                    this.$nextTick(() => {
+                        // Controleer of het element bestaat
+                        const element = document.getElementById('title');
+                        if (element) {
+                            // Scroll naar het element
+                            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
                 },
                 deselectProject() {
                     this.selectedProject = null;
