@@ -43,6 +43,9 @@
             </ul>
         </div>
     </nav>
+    <article v-if="selectedProject !== null" class="project-header-image"
+        :style="{'background-image': 'url(' + images[selectedProject][0] + ')'}">
+    </article>
     <main id="app" class="project-main">
         <h1 data-aos="zoom-in">Projecten</h1>
         <article class="vue-container" data-aos="fade-up">
