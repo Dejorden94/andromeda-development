@@ -383,6 +383,9 @@ p {
 }
 
 .project-header-image {
+    display: flex;
+    align-items: center;
+    position: relative;
     width: 100%;
     height: 30rem;
     /* Stel de gewenste hoogte in */
@@ -399,6 +402,12 @@ p {
     background-color: var(--background-color1);
     opacity: 0.7;
     margin: 0;
+}
+
+.project-text-position {
+    margin: 0 4rem;
+    color: var(--background-color-light);
+    position: absolute;
 }
 
 

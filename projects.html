@@ -47,8 +47,12 @@
     <main id="app" class="project-main">
         <article class="project-header-image"
             :style="{'background-image': 'url(' + (selectedProject !== null ? imagesCss[selectedProject][0] : placeholderImage) + ')'}">
+            <div class="project-text-position">
+                <h1 data-aos="zoom-in">Projecten</h1>
+                <h2 data-aos="zoom-in">Bekijk hier een aantal van mijn projecten</h2>
+            </div>
         </article>
-        <h1 data-aos="zoom-in">Projecten</h1>
+
         <article class="vue-container" data-aos="fade-up">
             <!-- Project kaartjes overzicht -->
 
