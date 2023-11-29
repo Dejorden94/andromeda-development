@@ -47,10 +47,10 @@
     <main id="app" class="project-main">
         <article class="project-header-image"
             :style="{'background-image': 'url(' + (selectedProject !== null ? imagesCss[selectedProject][0] : placeholderImage) + ')'}">
-            <div class="project-text-position">
+            <section class="project-text-position">
                 <h1 data-aos="zoom-in">Projecten</h1>
                 <h2 data-aos="zoom-in">Bekijk hier een aantal van mijn projecten</h2>
-            </div>
+            </section>
         </article>
 
         <article class="vue-container" data-aos="fade-up">
@@ -62,7 +62,6 @@
                 <h3>{{ tab }}</h3>
             </section>
 
-
             <!-- Gedetailleerde project informatie -->
             <section v-if="selectedProject !== null" class="project-detail">
                 <button @click="deselectProject">Terug</button>
@@ -71,7 +70,10 @@
                     data-aos="fade-left">
                 <p class="selected-text" v-for="(text, index) in texts[selectedProject]" :key="index"
                     data-aos="fade-right">{{ text }}</p>
-                <a class="project-selected-link" :href="src[selectedProject]" target="_blank" data-aos="fade-left">{{
+                <ul class="project-languages" data-aos="fade-up">
+                    <li v-for="language in languagesUsed[selectedProject]" :key="language">{{ language }}</li>
+                </ul>
+                <a class="project-selected-link" :href="src[selectedProject]" target="_blank" data-aos="fade-up">{{
                     buttons[selectedProject] }}</a>
             </section>
         </article>
@@ -87,38 +89,44 @@
             data: {
                 selectedProject: null,
                 placeholderImage: 'src/images/projects-banner.png',
-                tabs: ['XP Arena', 'Os site', 'Educatie'],
+                tabs: ['XP Arena', 'Os site', 'Educatie', 'Vrije tijd'],
                 activeTab: 0,
+                languagesUsed: [
+                    ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'Vue.js'], // Voor XP Arena
+                    ['HTML', 'CSS', 'JavaScript'], // Voor Os site
+                    ['HTML', 'CSS', 'JavaScript', 'Git', 'Github'],// Voor Educatie,
+                    ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Laravel'],// Voor Vrije tijd,
+                ],
                 images: [
                     ['src/images/projects/xp-arena/project-xparena.png'],
                     ['src/images/projects/os-portfolio/os-portfolio.png'],
+                    ['src/images/projects/educatie/educatie.jpg'],
                     ['src/images/projects/vrije-tijd/vrije-tijd.jpg'],
-
                 ],
                 imagesCss: [
                     ['../src/images/projects/xp-arena/project-xparena.png'],
                     ['../src/images/projects/os-portfolio/os-portfolio.png'],
+                    ['../src/images/projects/educatie/educatie.jpg'],
                     ['../src/images/projects/vrije-tijd/vrije-tijd.jpg'],
-
                 ],
                 texts: [
                     ['XP arena is een tool om elke taak te gamificeren, het originele platform was gemaakt met puur PHP. Tijdens deze opdracht heb ik het platform omgezet naar een Laravel en Vue applicatie.'],
                     ['Een kleine terugblik naar het begin van naar een van mijn experimentele sites. Voor mijn protfolio wilde ik graag een operating system zoals windows/mac namaken.'],
-                    ['Ik ben altijd bezig met het uitproberen van nieuwe dingen en het verbreden van mijn kennis door middel van eigen projecten en cursussen. Benieuwd naar wat ik allemaal maak? Check mijn GitHub!'],
-
+                    ['Tijdens mijn tijd in het onderwijs heb ik met studenten een aantal projecten gedraaid om hun verschillende dingen te leren met betreking tot web development.'],
+                    ['Ik ben altijd bezig met het uitproberen van nieuwe dingen en het verbreden van mijn kennis door middel van eigen projecten en cursussen. Benieuwd naar wat ik allemaal maak? Check mijn GitHub!']
                 ],
                 buttons:
                     [
                         'Link naar XP Arena',
                         'Link naar Os portfolio',
+                        'Link naar educatie projecten',
                         'Link naar GitHub',
-
                     ],
                 src: [
                     ['http://206.189.99.85/'],
                     ['https://dejorden94.github.io/'],
+                    ['project-overview.html'],
                     ['https://github.com/Dejorden94'],
-
                 ]
             },
             methods: {
