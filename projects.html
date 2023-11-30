@@ -66,6 +66,7 @@
             <section v-if="selectedProject !== null" class="project-detail">
                 <button @click="deselectProject">Terug</button>
                 <h2 id="title" data-aos="fade-right">{{ tabs[selectedProject] }}</h2>
+                <h3 v-if="isUnderConstruction(selectedProject)">🚧 Under construction 🚧</h3>
                 <img :src="images[selectedProject][0]" alt="Project afbeelding" class="project-image-selected"
                     data-aos="fade-left">
                 <p class="selected-text" v-for="(text, index) in texts[selectedProject]" :key="index"
@@ -129,11 +130,20 @@
                     ['https://dejorden94.github.io/'],
                     [],
                     ['project-overview.html'],
+                ],
+                construction: [
+                    [true],
+                    [false],
+                    [false],
+                    [false],
                 ]
             },
             methods: {
                 isButtonVisible(index) {
                     return this.buttons[index] && this.buttons[index].length > 0;
+                },
+                isUnderConstruction(index) {
+                    return this.construction[index] && this.construction[index][0] === true;
                 },
                 selectProject(index) {
                     this.selectedProject = index;
