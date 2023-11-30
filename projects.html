@@ -73,8 +73,10 @@
                 <ul class="project-languages" data-aos="fade-up">
                     <li v-for="language in languagesUsed[selectedProject]" :key="language">{{ language }}</li>
                 </ul>
-                <a class="project-selected-link" :href="src[selectedProject]" target="_blank" data-aos="fade-up">{{
-                    buttons[selectedProject] }}</a>
+                <a class="project-selected-link" :href="src[selectedProject]" target="_blank"
+                    v-if="isButtonVisible(selectedProject)" data-aos="fade-up">
+                    {{ buttons[selectedProject] }}
+                </a>
             </section>
         </article>
     </main>
@@ -125,11 +127,14 @@
                 src: [
                     ['http://206.189.99.85/'],
                     ['https://dejorden94.github.io/'],
-                    [''],
+                    [],
                     ['project-overview.html'],
                 ]
             },
             methods: {
+                isButtonVisible(index) {
+                    return this.buttons[index] && this.buttons[index].length > 0;
+                },
                 selectProject(index) {
                     this.selectedProject = index;
 
